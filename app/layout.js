@@ -1,3 +1,4 @@
+"use client"
 import { Host_Grotesk } from "next/font/google";
 import "./globals.css";
 import Provider from "./provider";
