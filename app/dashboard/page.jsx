@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+"use client"
 import React from 'react'
 import Info from './_components/Info'
 import LogoList from './_components/LogoList'
