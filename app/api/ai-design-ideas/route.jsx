@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
+"use client"
 import { AIDesignIdea } from "@/config/AiModel";
 import { NextResponse } from "next/server";
 export async function POST(req) {
