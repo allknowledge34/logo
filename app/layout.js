@@ -1,13 +1,13 @@
-"use client"
 import { Host_Grotesk } from "next/font/google";
 import "./globals.css";
 import Provider from "./provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "@/components/ui/sonner";
+import { Suspense } from "react";
 
 const host_Grotesk = Host_Grotesk({
-  subsets:['latin']
-})
+  subsets: ['latin']
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -16,18 +16,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
     <html lang="en">
-      <body
-       className={host_Grotesk.className}
-      >
-        <Provider>
-           {children}
-        </Provider>
-        <Toaster/>
-       
+      <body className={host_Grotesk.className}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <ClerkProvider>
+            <Provider>
+              {children}
+            </Provider>
+            <Toaster />
+          </ClerkProvider>
+        </Suspense>
       </body>
     </html>
-    </ClerkProvider>
   );
 }
+
