@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-"use client"
 import { doc, getDoc,setDoc } from "firebase/firestore"
 import { db } from "@/config/FirebaseConfig"
 import { NextResponse } from "next/server";
